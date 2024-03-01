@@ -1,9 +1,10 @@
 version: "3"
+
 services:
-  mongo:
-    image: mongo:latest
-    # environment:
-    #   MONGO_INITDB_ROOT_USERNAME: admin
-    #   MONGO_INITDB_ROOT_PASSWORD: admin
+  app:
+    build: .
     ports:
-      - '27017:27017'
+      - 8080:8080
+
+volumes:
+  mongo_db: {}
